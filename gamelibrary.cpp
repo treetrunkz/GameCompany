@@ -51,8 +51,8 @@ void videogame::print() {
     cout<<"\nAvailable "<<availability;
 }
 
-int videogame::search(char tbuy[20], char abuy[20]) {
-    if(strcmp(tbuy,title)==0 && strcmp(abuy,publisher)==0)
+int videogame::search(char titlebuy[20], char authorbuy[20]) {
+    if(strcmp(titlebuy,title)==0 && strcmp(authorbuy,publisher)==0)
         return 1;
     else return 0;
 }
