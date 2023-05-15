@@ -67,12 +67,13 @@ void videogame::purchase() {
         cout<<"You currently spent: "<<(*price)*count;
 
     }
+}
 
-int main() {
+int main()	{
     videogame *B[20];
-    int i=0, r, t, choice;
+    int i=0,r,t,choice;
     char titlebuy[20], authorbuy[20];
-    while(1)
+    while(1) {
         cout<<"\n\n\tMenu"
 		<<"\n1. Enter New Game To Catalog"
 		<<"\n2. Purchase"
@@ -98,7 +99,6 @@ int main() {
 				}
 				if(t==1)
 				cout<<"\nThis Game is Not in Stock";
-				
 				break;
 			case 3: cin.ignore();
 				cout<<"\nEnter Title Of Game: "; cin.getline(titlebuy,20);
@@ -107,7 +107,7 @@ int main() {
 				for(t=0;t<i;t++)	{
 					if(B[t]->search(titlebuy,authorbuy))	{
 						cout<<"\nGame Found Successfully";
-						B[t]->showdata();
+						B[t]->print();
 						break;
 					}
 				}
@@ -122,7 +122,7 @@ int main() {
 				for(t=0;t<i;t++)	{
 					if(B[t]->search(titlebuy,authorbuy))	{
 						cout<<"\nGame Found Successfully";
-						B[t]->editdata();
+						B[t]->edit();
 						break;
 					}
 				}
@@ -135,8 +135,10 @@ int main() {
 			
 		}
 	}
+
 	
 
 	
 	
 	return 0;
+}
